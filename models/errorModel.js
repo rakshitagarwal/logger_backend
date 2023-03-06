@@ -1,28 +1,29 @@
-const mongoose = require("mongoose");
-const {DTO_OBJECT}=require("../utils/common")
-const log_errorSchema = new mongoose.Schema({
+const Sequelize = require("sequelize");
+const db = require("../config/db");
+
+const logError = db.define("log_error", {
+  errorId: {
+    type: Sequelize.UUID,
+    defaultValue: Sequelize.UUIDV4,
+    allowNull: false,
+    primaryKey: true,
+  },
   level: {
-    type: String,
-    required: true,
-  },
-  projectId: {
-    type: mongoose.Schema.Types.ObjectId,
-    required: true,
-    ref: 'Project'
-  },
-  message: {
-    type: String,
-    required: true,
+    type: Sequelize.STRING,
   },
   label: {
-    type: String
+    type: Sequelize.STRING,
   },
-},
-  {
-    timestamps: true,
-    ...DTO_OBJECT
-  }
-);
+  projectId: {
+    type: Sequelize.STRING,
+    reference: {
+      model: "projects",
+      key: "projectId",
+    },
+  },
+  message: {
+    type: Sequelize.TEXT,
+  },
+});
 
-
-module.exports = mongoose.model("log_error", log_errorSchema);
+module.exports = logError;

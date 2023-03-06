@@ -9,7 +9,7 @@ const errorLogger = createLogger({
   ),
   transports: [
     new transports.Console(),
-    new transports.File({ filename: "logs/error.log" }),
+    new transports.File({ filename: "error.log" }),
   ],
 });
 

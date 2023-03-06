@@ -1,30 +1,32 @@
-const mongoose = require("mongoose");
-const { DTO_OBJECT } = require("../utils/common");
-const projectSchema = new mongoose.Schema({
+const Sequelize = require("sequelize");
+const db = require("../config/db");
+const errorModel = require("./errorModel");
+const Project = db.define("projects", {
+  projectId: {
+    type: Sequelize.UUID,
+    defaultValue: Sequelize.UUIDV4,
+    allowNull: false,
+    primaryKey: true,
+  },
   projectName: {
-    type: String,
-    required: true,
+    type: Sequelize.STRING,
   },
   userId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
-    required: true,
+    type: Sequelize.STRING,
+    reference: {
+      model: "users",
+      key: "userId",
+    },
   },
   description: {
-    type: String
-  },
-  slug: {
-    type: String
-  },
-  textTag: {
-    type: String,
+    type: Sequelize.TEXT,
   },
   status: {
-    type: String,
-    enum: ["ACTIVE", "INACTIVE", "DELETED"],
-    default: "ACTIVE",
+    type: Sequelize.ENUM,
+    values: ["ACTIVE", "INACTIVE", "DELETED"],
   },
-},{ timestamps: true,
-  ...DTO_OBJECT
 });
-module.exports = mongoose.model("Project", projectSchema);
+
+Project.hasMany(errorModel, { foreignKey: "projectId",targetKey:"projectId", onDelete: "CASCADE" });
+errorModel.belongsTo(Project, { foreignKey: "projectId",targetKey:"projectId", onDelete: "CASCADE" });
+module.exports = Project;

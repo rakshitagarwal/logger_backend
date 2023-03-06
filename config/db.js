@@ -1,15 +1,20 @@
-const mongoose = require("mongoose");
-const { infoLogger } = require("../utils/logger");
+const sequelize = require("sequelize");
 require("dotenv").config();
-const db = mongoose.connect(
-  process.env.DB_URL,
+
+const db = new sequelize(
+  process.env.DB_NAME,
+  process.env.DB_USER,
+  process.env.DB_PASSWORD,
   {
-    useNewUrlParser: true,
-  },
-  (err) => {
-    if (err) throw err;
-    infoLogger.info({ message: "Database connected!" });
+    host: process.env.DB_HOST,
+    dialect: process.env.DB_DIALECT,
+    operationsAliases: false,
+    pool: {
+      max: 5,
+      min: 0,
+      acquire: 30000,
+      idle: 10000,
+    },
   }
 );
-
 module.exports = db;

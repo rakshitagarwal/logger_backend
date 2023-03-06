@@ -1,16 +1,17 @@
 const LogError = require("../models/errorModel");
-const {HttpNotFound,success,HttpConflictRequest}=require("../utils/errorHandler");
+const { response } = require("../utils/common");
+const Op = require("sequelize").Op;
 
 const addLogErrorService = async (payload) => {
   const result = await LogError.create(payload);
-  return success("logs added successfully", result);
+  return response("logs added successfully", 201, result);
 };
 
 const findAllErrorService = async (payload) => {
   let filter = {};
-  let skip;
-  if (payload?.skip) {
-    skip = payload.skip * payload.limit;
+  let offset;
+  if (payload?.offset) {
+    offset = payload.offset * payload.limit;
   }
   if (payload?.projectId) {
     filter = {
@@ -20,27 +21,18 @@ const findAllErrorService = async (payload) => {
   if (payload?.search) {
     filter = {
       ...filter,
-      message: {$regex:payload.search}
+      [Op.or]: [{ message: { [Op.like]: `%${payload.search}%` } }],
     };
   }
-  const result = await LogError.count({projectId: payload?.projectId });
-  const errorLog = await LogError.find(filter)
-    .limit(payload.limit)
-    .skip(skip);
-  return success("found successfully", {data:errorLog,totalErrData:result,pageNumber:payload.skip+1});
+  const errorLog = await LogError.findAll({
+    where: filter,
+    offset,
+    limit: payload.limit,
+  });
+  return response("found successfully", 200, errorLog);
 };
-
-const deleteErrorService = async (payload) => {
-  const result = await LogError.deleteMany(payload)
-  if (!result) {
-    return HttpNotFound(`Error log doesn't exist`);
-  } else {
-    return success('Error log deleted successfully');
-  }
-}
 
 module.exports = {
   findAllErrorService,
   addLogErrorService,
-  deleteErrorService
 };

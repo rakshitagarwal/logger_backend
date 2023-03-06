@@ -13,14 +13,16 @@
   "dependencies": {
     "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
-    "crypto": "^1.0.1",
     "dotenv": "^16.0.3",
-    "ejs": "^3.1.8",
     "express": "^4.18.2",
     "joi": "^17.8.3",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.10.0",
+    "mysql2": "^3.1.2",
     "nodemailer": "^6.9.1",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "sequelize": "^6.28.1",
+    "uuid": "^9.0.0",
     "winston": "^3.8.2"
   },
   "devDependencies": {

@@ -1,0 +1,884 @@
+{
+  message: ConnectionError [SequelizeConnectionError]: Unknown database 'logger'
+      at ConnectionManager.connect (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\mysql\connection-manager.js:102:17)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async ConnectionManager._connect (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\connection-manager.js:220:24)
+      at async C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\connection-manager.js:174:32 {
+    parent: Error: Unknown database 'logger'
+        at Packet.asError (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at ClientHandshake.execute (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:488:32)
+        at PacketParser.onPacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:94:12)
+        at PacketParser.executeStart (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:101:25)
+        at Socket.emit (node:events:527:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: 'ER_BAD_DB_ERROR',
+      errno: 1049,
+      sqlState: '42000',
+      sqlMessage: "Unknown database 'logger'",
+      sql: undefined
+    },
+    original: Error: Unknown database 'logger'
+        at Packet.asError (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at ClientHandshake.execute (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:488:32)
+        at PacketParser.onPacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:94:12)
+        at PacketParser.executeStart (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:101:25)
+        at Socket.emit (node:events:527:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: 'ER_BAD_DB_ERROR',
+      errno: 1049,
+      sqlState: '42000',
+      sqlMessage: "Unknown database 'logger'",
+      sql: undefined
+    }
+  },
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-22T06:20:35.054Z'
+}
+{
+  message: ConnectionError [SequelizeConnectionError]: Unknown database 'logger'
+      at ConnectionManager.connect (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\mysql\connection-manager.js:102:17)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async ConnectionManager._connect (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\connection-manager.js:220:24)
+      at async C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\connection-manager.js:174:32 {
+    parent: Error: Unknown database 'logger'
+        at Packet.asError (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at ClientHandshake.execute (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:488:32)
+        at PacketParser.onPacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:94:12)
+        at PacketParser.executeStart (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:101:25)
+        at Socket.emit (node:events:527:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: 'ER_BAD_DB_ERROR',
+      errno: 1049,
+      sqlState: '42000',
+      sqlMessage: "Unknown database 'logger'",
+      sql: undefined
+    },
+    original: Error: Unknown database 'logger'
+        at Packet.asError (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at ClientHandshake.execute (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:488:32)
+        at PacketParser.onPacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:94:12)
+        at PacketParser.executeStart (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:101:25)
+        at Socket.emit (node:events:527:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: 'ER_BAD_DB_ERROR',
+      errno: 1049,
+      sqlState: '42000',
+      sqlMessage: "Unknown database 'logger'",
+      sql: undefined
+    }
+  },
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-22T06:20:35.070Z'
+}
+{
+  message: Error: data and hash arguments required
+      at Object.compareSync (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\bcrypt\bcrypt.js:166:15)
+      at userLoginService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\userService.js:30:42)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async login (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\controllers\userController.js:13:18),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-22T11:24:13.051Z'
+}
+{
+  message: Error: secretOrPrivateKey must have a value
+      at Object.module.exports [as sign] (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\jsonwebtoken\sign.js:105:20)
+      at exports.tokenGenerator (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\utils\helper.js:5:21)
+      at userLoginService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\userService.js:40:27)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async login (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\controllers\userController.js:13:18),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-22T11:26:02.014Z'
+}
+{
+  message: EagerLoadingError [SequelizeEagerLoadingError]: log_error is not associated to projects!
+      at Function._getIncludedAssociation (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:565:13)
+      at Function._validateIncludedElement (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:502:53)
+      at C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:421:37
+      at Array.map (<anonymous>)
+      at Function._validateIncludedElements (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:417:39)
+      at Function.findAll (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1118:12)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async Function.findOne (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1228:12)
+      at async findProjectService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\projectService.js:6:19)
+      at async findProject (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\controllers\projectController.js:16:16),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-22T12:18:05.416Z'
+}
+{
+  message: Error
+      at Query.run (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+      at C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\sequelize.js:314:28
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async Function.sync (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:984:11)
+      at async Sequelize._syncModelsWithCyclicReferences (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\sequelize.js:397:7) {
+    name: 'SequelizeDatabaseError',
+    parent: Error: Referencing column 'projectId' and referenced column 'projectId' in foreign key constraint 'log_errors_ibfk_1' are incompatible.
+        at Packet.asError (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at Query.execute (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:488:32)
+        at PacketParser.onPacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:94:12)
+        at PacketParser.executeStart (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:101:25)
+        at Socket.emit (node:events:527:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: undefined,
+      errno: 3780,
+      sqlState: 'HY000',
+      sqlMessage: "Referencing column 'projectId' and referenced column 'projectId' in foreign key constraint 'log_errors_ibfk_1' are incompatible.",
+      sql: 'ALTER TABLE `log_errors` ADD FOREIGN KEY (`projectId`) REFERENCES `projects` (`projectId`) ON DELETE NO ACTION ON UPDATE CASCADE;',
+      parameters: undefined
+    },
+    original: Error: Referencing column 'projectId' and referenced column 'projectId' in foreign key constraint 'log_errors_ibfk_1' are incompatible.
+        at Packet.asError (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at Query.execute (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:488:32)
+        at PacketParser.onPacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:94:12)
+        at PacketParser.executeStart (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:101:25)
+        at Socket.emit (node:events:527:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: undefined,
+      errno: 3780,
+      sqlState: 'HY000',
+      sqlMessage: "Referencing column 'projectId' and referenced column 'projectId' in foreign key constraint 'log_errors_ibfk_1' are incompatible.",
+      sql: 'ALTER TABLE `log_errors` ADD FOREIGN KEY (`projectId`) REFERENCES `projects` (`projectId`) ON DELETE NO ACTION ON UPDATE CASCADE;',
+      parameters: undefined
+    },
+    sql: 'ALTER TABLE `log_errors` ADD FOREIGN KEY (`projectId`) REFERENCES `projects` (`projectId`) ON DELETE NO ACTION ON UPDATE CASCADE;',
+    parameters: {}
+  },
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-22T12:20:27.628Z'
+}
+{
+  message: Error
+      at Query.run (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+      at C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\sequelize.js:314:28
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async Function.sync (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:984:11)
+      at async Sequelize._syncModelsWithCyclicReferences (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\sequelize.js:397:7) {
+    name: 'SequelizeDatabaseError',
+    parent: Error: Referencing column 'projectId' and referenced column 'projectId' in foreign key constraint 'log_errors_ibfk_1' are incompatible.
+        at Packet.asError (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at Query.execute (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:488:32)
+        at PacketParser.onPacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:94:12)
+        at PacketParser.executeStart (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:101:25)
+        at Socket.emit (node:events:527:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: undefined,
+      errno: 3780,
+      sqlState: 'HY000',
+      sqlMessage: "Referencing column 'projectId' and referenced column 'projectId' in foreign key constraint 'log_errors_ibfk_1' are incompatible.",
+      sql: 'ALTER TABLE `log_errors` ADD FOREIGN KEY (`projectId`) REFERENCES `projects` (`projectId`) ON DELETE NO ACTION ON UPDATE CASCADE;',
+      parameters: undefined
+    },
+    original: Error: Referencing column 'projectId' and referenced column 'projectId' in foreign key constraint 'log_errors_ibfk_1' are incompatible.
+        at Packet.asError (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at Query.execute (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:488:32)
+        at PacketParser.onPacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:94:12)
+        at PacketParser.executeStart (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:101:25)
+        at Socket.emit (node:events:527:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: undefined,
+      errno: 3780,
+      sqlState: 'HY000',
+      sqlMessage: "Referencing column 'projectId' and referenced column 'projectId' in foreign key constraint 'log_errors_ibfk_1' are incompatible.",
+      sql: 'ALTER TABLE `log_errors` ADD FOREIGN KEY (`projectId`) REFERENCES `projects` (`projectId`) ON DELETE NO ACTION ON UPDATE CASCADE;',
+      parameters: undefined
+    },
+    sql: 'ALTER TABLE `log_errors` ADD FOREIGN KEY (`projectId`) REFERENCES `projects` (`projectId`) ON DELETE NO ACTION ON UPDATE CASCADE;',
+    parameters: {}
+  },
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-22T12:21:09.227Z'
+}
+{
+  message: Error
+      at Query.run (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+      at C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\sequelize.js:314:28
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async Function.sync (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:984:11)
+      at async Sequelize._syncModelsWithCyclicReferences (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\sequelize.js:397:7) {
+    name: 'SequelizeDatabaseError',
+    parent: Error: Referencing column 'projectId' and referenced column 'projectId' in foreign key constraint 'log_errors_ibfk_1' are incompatible.
+        at Packet.asError (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at Query.execute (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:488:32)
+        at PacketParser.onPacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:94:12)
+        at PacketParser.executeStart (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:101:25)
+        at Socket.emit (node:events:527:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: undefined,
+      errno: 3780,
+      sqlState: 'HY000',
+      sqlMessage: "Referencing column 'projectId' and referenced column 'projectId' in foreign key constraint 'log_errors_ibfk_1' are incompatible.",
+      sql: 'ALTER TABLE `log_errors` ADD FOREIGN KEY (`projectId`) REFERENCES `projects` (`projectId`) ON DELETE CASCADE ON UPDATE CASCADE;',
+      parameters: undefined
+    },
+    original: Error: Referencing column 'projectId' and referenced column 'projectId' in foreign key constraint 'log_errors_ibfk_1' are incompatible.
+        at Packet.asError (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at Query.execute (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:488:32)
+        at PacketParser.onPacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:94:12)
+        at PacketParser.executeStart (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:101:25)
+        at Socket.emit (node:events:527:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: undefined,
+      errno: 3780,
+      sqlState: 'HY000',
+      sqlMessage: "Referencing column 'projectId' and referenced column 'projectId' in foreign key constraint 'log_errors_ibfk_1' are incompatible.",
+      sql: 'ALTER TABLE `log_errors` ADD FOREIGN KEY (`projectId`) REFERENCES `projects` (`projectId`) ON DELETE CASCADE ON UPDATE CASCADE;',
+      parameters: undefined
+    },
+    sql: 'ALTER TABLE `log_errors` ADD FOREIGN KEY (`projectId`) REFERENCES `projects` (`projectId`) ON DELETE CASCADE ON UPDATE CASCADE;',
+    parameters: {}
+  },
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-22T12:22:24.128Z'
+}
+{
+  message: Error
+      at Query.run (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+      at C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\sequelize.js:314:28
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async Function.sync (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:984:11)
+      at async Sequelize._syncModelsWithCyclicReferences (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\sequelize.js:397:7) {
+    name: 'SequelizeDatabaseError',
+    parent: Error: Referencing column 'projectId' and referenced column 'projectId' in foreign key constraint 'log_errors_ibfk_1' are incompatible.
+        at Packet.asError (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at Query.execute (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:488:32)
+        at PacketParser.onPacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:94:12)
+        at PacketParser.executeStart (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:101:25)
+        at Socket.emit (node:events:527:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: undefined,
+      errno: 3780,
+      sqlState: 'HY000',
+      sqlMessage: "Referencing column 'projectId' and referenced column 'projectId' in foreign key constraint 'log_errors_ibfk_1' are incompatible.",
+      sql: 'ALTER TABLE `log_errors` ADD FOREIGN KEY (`projectId`) REFERENCES `projects` (`projectId`) ON DELETE CASCADE ON UPDATE CASCADE;',
+      parameters: undefined
+    },
+    original: Error: Referencing column 'projectId' and referenced column 'projectId' in foreign key constraint 'log_errors_ibfk_1' are incompatible.
+        at Packet.asError (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at Query.execute (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:488:32)
+        at PacketParser.onPacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:94:12)
+        at PacketParser.executeStart (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:101:25)
+        at Socket.emit (node:events:527:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: undefined,
+      errno: 3780,
+      sqlState: 'HY000',
+      sqlMessage: "Referencing column 'projectId' and referenced column 'projectId' in foreign key constraint 'log_errors_ibfk_1' are incompatible.",
+      sql: 'ALTER TABLE `log_errors` ADD FOREIGN KEY (`projectId`) REFERENCES `projects` (`projectId`) ON DELETE CASCADE ON UPDATE CASCADE;',
+      parameters: undefined
+    },
+    sql: 'ALTER TABLE `log_errors` ADD FOREIGN KEY (`projectId`) REFERENCES `projects` (`projectId`) ON DELETE CASCADE ON UPDATE CASCADE;',
+    parameters: {}
+  },
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-22T12:22:30.542Z'
+}
+{
+  message: Error
+      at Query.run (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+      at C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\sequelize.js:314:28
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async Function.sync (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:984:11)
+      at async Sequelize._syncModelsWithCyclicReferences (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\sequelize.js:397:7) {
+    name: 'SequelizeDatabaseError',
+    parent: Error: Referencing column 'projectId' and referenced column 'projectId' in foreign key constraint 'log_errors_ibfk_1' are incompatible.
+        at Packet.asError (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at Query.execute (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:488:32)
+        at PacketParser.onPacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:94:12)
+        at PacketParser.executeStart (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:101:25)
+        at Socket.emit (node:events:527:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: undefined,
+      errno: 3780,
+      sqlState: 'HY000',
+      sqlMessage: "Referencing column 'projectId' and referenced column 'projectId' in foreign key constraint 'log_errors_ibfk_1' are incompatible.",
+      sql: 'ALTER TABLE `log_errors` ADD FOREIGN KEY (`projectId`) REFERENCES `projects` (`projectId`) ON DELETE CASCADE ON UPDATE CASCADE;',
+      parameters: undefined
+    },
+    original: Error: Referencing column 'projectId' and referenced column 'projectId' in foreign key constraint 'log_errors_ibfk_1' are incompatible.
+        at Packet.asError (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at Query.execute (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:488:32)
+        at PacketParser.onPacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:94:12)
+        at PacketParser.executeStart (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:101:25)
+        at Socket.emit (node:events:527:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: undefined,
+      errno: 3780,
+      sqlState: 'HY000',
+      sqlMessage: "Referencing column 'projectId' and referenced column 'projectId' in foreign key constraint 'log_errors_ibfk_1' are incompatible.",
+      sql: 'ALTER TABLE `log_errors` ADD FOREIGN KEY (`projectId`) REFERENCES `projects` (`projectId`) ON DELETE CASCADE ON UPDATE CASCADE;',
+      parameters: undefined
+    },
+    sql: 'ALTER TABLE `log_errors` ADD FOREIGN KEY (`projectId`) REFERENCES `projects` (`projectId`) ON DELETE CASCADE ON UPDATE CASCADE;',
+    parameters: {}
+  },
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-22T12:22:32.713Z'
+}
+{
+  message: Error
+      at Query.run (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+      at C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\sequelize.js:314:28
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async MySQLQueryInterface.select (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+      at async Function.findAll (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1134:21)
+      at async findProjectService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\projectService.js:6:19)
+      at async findProject (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\controllers\projectController.js:16:16) {
+    name: 'SequelizeDatabaseError',
+    parent: Error: Unknown column 'logErrorErrorId' in 'field list'
+        at Packet.asError (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at Query.execute (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:488:32)
+        at PacketParser.onPacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:94:12)
+        at PacketParser.executeStart (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:101:25)
+        at Socket.emit (node:events:527:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: 'ER_BAD_FIELD_ERROR',
+      errno: 1054,
+      sqlState: '42S22',
+      sqlMessage: "Unknown column 'logErrorErrorId' in 'field list'",
+      sql: "SELECT `projectId`, `projectName`, `userId`, `description`, `status`, `createdAt`, `updatedAt`, `logErrorErrorId` FROM `projects` AS `projects` WHERE `projects`.`projectId` = '35773d7b-569d-4762-95ed-30bfd980d7ff';",
+      parameters: undefined
+    },
+    original: Error: Unknown column 'logErrorErrorId' in 'field list'
+        at Packet.asError (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at Query.execute (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:488:32)
+        at PacketParser.onPacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:94:12)
+        at PacketParser.executeStart (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:101:25)
+        at Socket.emit (node:events:527:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: 'ER_BAD_FIELD_ERROR',
+      errno: 1054,
+      sqlState: '42S22',
+      sqlMessage: "Unknown column 'logErrorErrorId' in 'field list'",
+      sql: "SELECT `projectId`, `projectName`, `userId`, `description`, `status`, `createdAt`, `updatedAt`, `logErrorErrorId` FROM `projects` AS `projects` WHERE `projects`.`projectId` = '35773d7b-569d-4762-95ed-30bfd980d7ff';",
+      parameters: undefined
+    },
+    sql: "SELECT `projectId`, `projectName`, `userId`, `description`, `status`, `createdAt`, `updatedAt`, `logErrorErrorId` FROM `projects` AS `projects` WHERE `projects`.`projectId` = '35773d7b-569d-4762-95ed-30bfd980d7ff';",
+    parameters: {}
+  },
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-22T12:24:56.448Z'
+}
+{
+  message: Error
+      at Query.run (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+      at C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\sequelize.js:314:28
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async MySQLQueryInterface.select (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+      at async Function.findAll (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1134:21)
+      at async findProjectService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\projectService.js:6:19)
+      at async findProject (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\controllers\projectController.js:16:16) {
+    name: 'SequelizeDatabaseError',
+    parent: Error: Unknown column 'logErrorErrorId' in 'field list'
+        at Packet.asError (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at Query.execute (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:488:32)
+        at PacketParser.onPacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:94:12)
+        at PacketParser.executeStart (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:101:25)
+        at Socket.emit (node:events:527:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: 'ER_BAD_FIELD_ERROR',
+      errno: 1054,
+      sqlState: '42S22',
+      sqlMessage: "Unknown column 'logErrorErrorId' in 'field list'",
+      sql: "SELECT `projectId`, `projectName`, `userId`, `description`, `status`, `createdAt`, `updatedAt`, `logErrorErrorId` FROM `projects` AS `projects` WHERE `projects`.`projectId` = '35773d7b-569d-4762-95ed-30bfd980d7ff';",
+      parameters: undefined
+    },
+    original: Error: Unknown column 'logErrorErrorId' in 'field list'
+        at Packet.asError (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at Query.execute (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:488:32)
+        at PacketParser.onPacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:94:12)
+        at PacketParser.executeStart (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:101:25)
+        at Socket.emit (node:events:527:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: 'ER_BAD_FIELD_ERROR',
+      errno: 1054,
+      sqlState: '42S22',
+      sqlMessage: "Unknown column 'logErrorErrorId' in 'field list'",
+      sql: "SELECT `projectId`, `projectName`, `userId`, `description`, `status`, `createdAt`, `updatedAt`, `logErrorErrorId` FROM `projects` AS `projects` WHERE `projects`.`projectId` = '35773d7b-569d-4762-95ed-30bfd980d7ff';",
+      parameters: undefined
+    },
+    sql: "SELECT `projectId`, `projectName`, `userId`, `description`, `status`, `createdAt`, `updatedAt`, `logErrorErrorId` FROM `projects` AS `projects` WHERE `projects`.`projectId` = '35773d7b-569d-4762-95ed-30bfd980d7ff';",
+    parameters: {}
+  },
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-22T12:25:35.312Z'
+}
+{
+  message: Error
+      at Query.run (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+      at C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\sequelize.js:314:28
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async Function.sync (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:984:11)
+      at async Sequelize._syncModelsWithCyclicReferences (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\sequelize.js:397:7) {
+    name: 'SequelizeDatabaseError',
+    parent: Error: Referencing column 'projectId' and referenced column 'projectId' in foreign key constraint 'log_errors_ibfk_1' are incompatible.
+        at Packet.asError (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at Query.execute (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:488:32)
+        at PacketParser.onPacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:94:12)
+        at PacketParser.executeStart (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:101:25)
+        at Socket.emit (node:events:527:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: undefined,
+      errno: 3780,
+      sqlState: 'HY000',
+      sqlMessage: "Referencing column 'projectId' and referenced column 'projectId' in foreign key constraint 'log_errors_ibfk_1' are incompatible.",
+      sql: 'ALTER TABLE `log_errors` ADD FOREIGN KEY (`projectId`) REFERENCES `projects` (`projectId`) ON DELETE CASCADE ON UPDATE CASCADE;',
+      parameters: undefined
+    },
+    original: Error: Referencing column 'projectId' and referenced column 'projectId' in foreign key constraint 'log_errors_ibfk_1' are incompatible.
+        at Packet.asError (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packets\packet.js:728:17)
+        at Query.execute (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\commands\command.js:29:26)
+        at Connection.handlePacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:488:32)
+        at PacketParser.onPacket (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:94:12)
+        at PacketParser.executeStart (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\packet_parser.js:75:16)
+        at Socket.<anonymous> (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\mysql2\lib\connection.js:101:25)
+        at Socket.emit (node:events:527:28)
+        at addChunk (node:internal/streams/readable:315:12)
+        at readableAddChunk (node:internal/streams/readable:289:9)
+        at Socket.Readable.push (node:internal/streams/readable:228:10) {
+      code: undefined,
+      errno: 3780,
+      sqlState: 'HY000',
+      sqlMessage: "Referencing column 'projectId' and referenced column 'projectId' in foreign key constraint 'log_errors_ibfk_1' are incompatible.",
+      sql: 'ALTER TABLE `log_errors` ADD FOREIGN KEY (`projectId`) REFERENCES `projects` (`projectId`) ON DELETE CASCADE ON UPDATE CASCADE;',
+      parameters: undefined
+    },
+    sql: 'ALTER TABLE `log_errors` ADD FOREIGN KEY (`projectId`) REFERENCES `projects` (`projectId`) ON DELETE CASCADE ON UPDATE CASCADE;',
+    parameters: {}
+  },
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-22T12:31:10.042Z'
+}
+{
+  message: Error: WHERE parameter "email" has invalid "undefined" value
+      at MySQLQueryGenerator.whereItemQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1693:13)
+      at C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1684:25
+      at Array.forEach (<anonymous>)
+      at MySQLQueryGenerator.whereItemsQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1682:35)
+      at MySQLQueryGenerator.getWhereConditions (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2025:19)
+      at MySQLQueryGenerator.selectQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:954:28)
+      at MySQLQueryInterface.select (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:59)
+      at Function.findAll (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1134:47)
+      at async Function.findOne (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1228:12)
+      at async findUserService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\userService.js:6:16),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-23T09:24:12.527Z'
+}
+{
+  message: Error: WHERE parameter "email" has invalid "undefined" value
+      at MySQLQueryGenerator.whereItemQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1693:13)
+      at C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1684:25
+      at Array.forEach (<anonymous>)
+      at MySQLQueryGenerator.whereItemsQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1682:35)
+      at MySQLQueryGenerator.getWhereConditions (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2025:19)
+      at MySQLQueryGenerator.selectQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:954:28)
+      at MySQLQueryInterface.select (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:59)
+      at Function.findAll (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1134:47)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async Function.findOne (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1228:12),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-23T09:25:20.150Z'
+}
+{
+  message: Error: WHERE parameter "email" has invalid "undefined" value
+      at MySQLQueryGenerator.whereItemQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1693:13)
+      at C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1684:25
+      at Array.forEach (<anonymous>)
+      at MySQLQueryGenerator.whereItemsQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1682:35)
+      at MySQLQueryGenerator.getWhereConditions (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2025:19)
+      at MySQLQueryGenerator.selectQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:954:28)
+      at MySQLQueryInterface.select (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:59)
+      at Function.findAll (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1134:47)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async Function.findOne (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1228:12),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-23T09:25:42.507Z'
+}
+{
+  message: Error: WHERE parameter "email" has invalid "undefined" value
+      at MySQLQueryGenerator.whereItemQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1693:13)
+      at C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1684:25
+      at Array.forEach (<anonymous>)
+      at MySQLQueryGenerator.whereItemsQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1682:35)
+      at MySQLQueryGenerator.getWhereConditions (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2025:19)
+      at MySQLQueryGenerator.selectQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:954:28)
+      at MySQLQueryInterface.select (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:59)
+      at Function.findAll (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1134:47)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async Function.findOne (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1228:12),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-23T09:26:09.951Z'
+}
+{
+  message: Error: WHERE parameter "email" has invalid "undefined" value
+      at MySQLQueryGenerator.whereItemQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1693:13)
+      at C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1684:25
+      at Array.forEach (<anonymous>)
+      at MySQLQueryGenerator.whereItemsQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1682:35)
+      at MySQLQueryGenerator.getWhereConditions (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2025:19)
+      at MySQLQueryGenerator.selectQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:954:28)
+      at MySQLQueryInterface.select (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:59)
+      at Function.findAll (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1134:47)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async Function.findOne (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1228:12),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-23T09:36:23.138Z'
+}
+{
+  message: Error: WHERE parameter "projectName" has invalid "undefined" value
+      at MySQLQueryGenerator.whereItemQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1693:13)
+      at C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1684:25
+      at Array.forEach (<anonymous>)
+      at MySQLQueryGenerator.whereItemsQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1682:35)
+      at MySQLQueryGenerator.getWhereConditions (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2025:19)
+      at MySQLQueryGenerator.selectQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:954:28)
+      at MySQLQueryInterface.select (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:59)
+      at Function.findAll (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1134:47)
+      at async findProjectService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\projectService.js:7:19)
+      at async addProjectService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\projectService.js:19:24),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-24T05:16:39.347Z'
+}
+{
+  message: Error: WHERE parameter "projectName" has invalid "undefined" value
+      at MySQLQueryGenerator.whereItemQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1693:13)
+      at C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1684:25
+      at Array.forEach (<anonymous>)
+      at MySQLQueryGenerator.whereItemsQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1682:35)
+      at MySQLQueryGenerator.getWhereConditions (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2025:19)
+      at MySQLQueryGenerator.selectQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:954:28)
+      at MySQLQueryInterface.select (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:59)
+      at Function.findAll (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1134:47)
+      at async findProjectService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\projectService.js:7:19)
+      at async addProjectService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\projectService.js:19:24),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-24T05:18:13.066Z'
+}
+{
+  message: Error: WHERE parameter "projectName" has invalid "undefined" value
+      at MySQLQueryGenerator.whereItemQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1693:13)
+      at C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1684:25
+      at Array.forEach (<anonymous>)
+      at MySQLQueryGenerator.whereItemsQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1682:35)
+      at MySQLQueryGenerator.getWhereConditions (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2025:19)
+      at MySQLQueryGenerator.selectQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:954:28)
+      at MySQLQueryInterface.select (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:59)
+      at Function.findAll (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1134:47)
+      at async findProjectService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\projectService.js:7:19)
+      at async addProjectService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\projectService.js:19:24),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-24T05:20:49.279Z'
+}
+{
+  message: Error: WHERE parameter "projectName" has invalid "undefined" value
+      at MySQLQueryGenerator.whereItemQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1693:13)
+      at C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1684:25
+      at Array.forEach (<anonymous>)
+      at MySQLQueryGenerator.whereItemsQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1682:35)
+      at MySQLQueryGenerator.getWhereConditions (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2025:19)
+      at MySQLQueryGenerator.selectQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:954:28)
+      at MySQLQueryInterface.select (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:59)
+      at Function.findAll (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1134:47)
+      at async findProjectService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\projectService.js:7:19)
+      at async addProjectService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\projectService.js:19:24),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-24T05:24:30.857Z'
+}
+{
+  message: Error: WHERE parameter "projectName" has invalid "undefined" value
+      at MySQLQueryGenerator.whereItemQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1693:13)
+      at C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1684:25
+      at Array.forEach (<anonymous>)
+      at MySQLQueryGenerator.whereItemsQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1682:35)
+      at MySQLQueryGenerator.getWhereConditions (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2025:19)
+      at MySQLQueryGenerator.selectQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:954:28)
+      at MySQLQueryInterface.select (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:59)
+      at Function.findAll (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1134:47)
+      at async findProjectService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\projectService.js:7:19)
+      at async updateProjectService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\projectService.js:32:24),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-24T05:28:48.268Z'
+}
+{
+  message: Error: WHERE parameter "projectName" has invalid "undefined" value
+      at MySQLQueryGenerator.whereItemQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1693:13)
+      at C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1684:25
+      at Array.forEach (<anonymous>)
+      at MySQLQueryGenerator.whereItemsQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1682:35)
+      at MySQLQueryGenerator.getWhereConditions (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2025:19)
+      at MySQLQueryGenerator.selectQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:954:28)
+      at MySQLQueryInterface.select (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:59)
+      at Function.findAll (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1134:47)
+      at async findProjectService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\projectService.js:7:19)
+      at async updateProjectService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\projectService.js:32:24),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-24T05:29:04.848Z'
+}
+{
+  message: Error: WHERE parameter "projectName" has invalid "undefined" value
+      at MySQLQueryGenerator.whereItemQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1693:13)
+      at C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1684:25
+      at Array.forEach (<anonymous>)
+      at MySQLQueryGenerator.whereItemsQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1682:35)
+      at MySQLQueryGenerator.getWhereConditions (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2025:19)
+      at MySQLQueryGenerator.selectQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:954:28)
+      at MySQLQueryInterface.select (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:59)
+      at Function.findAll (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1134:47)
+      at async findProjectService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\projectService.js:7:19)
+      at async updateProjectService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\projectService.js:32:24),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-24T05:30:39.434Z'
+}
+{
+  message: Error: WHERE parameter "projectName" has invalid "undefined" value
+      at MySQLQueryGenerator.whereItemQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1693:13)
+      at C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1684:25
+      at Array.forEach (<anonymous>)
+      at MySQLQueryGenerator.whereItemsQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1682:35)
+      at MySQLQueryGenerator.getWhereConditions (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2025:19)
+      at MySQLQueryGenerator.selectQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:954:28)
+      at MySQLQueryInterface.select (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:59)
+      at Function.findAll (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1134:47)
+      at async findProjectService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\projectService.js:7:19)
+      at async updateProjectService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\projectService.js:32:24),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-24T05:31:04.284Z'
+}
+{
+  message: TypeError: Cannot read properties of undefined (reading 'code')
+      at updateProject (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\controllers\projectController.js:31:29)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-24T05:32:44.720Z'
+}
+{
+  message: TypeError: Cannot read properties of undefined (reading 'code')
+      at updateProject (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\controllers\projectController.js:31:29)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-24T05:33:40.666Z'
+}
+{
+  message: TypeError: Cannot read properties of undefined (reading 'code')
+      at updateProject (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\controllers\projectController.js:31:29)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-24T05:34:30.559Z'
+}
+{
+  message: TypeError: Cannot read properties of undefined (reading 'code')
+      at updateProject (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\controllers\projectController.js:31:29)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-24T05:34:48.370Z'
+}
+{
+  message: RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined
+      at new NodeError (node:internal/errors:372:5)
+      at ServerResponse.writeHead (node:_http_server:275:11)
+      at ServerResponse._implicitHeader (node:_http_server:266:8)
+      at ServerResponse.end (node:_http_outgoing:871:10)
+      at ServerResponse.send (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\express\lib\response.js:232:10)
+      at ServerResponse.json (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\express\lib\response.js:278:15)
+      at updateProject (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\controllers\projectController.js:31:36)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+    code: 'ERR_HTTP_INVALID_STATUS_CODE'
+  },
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-24T05:37:08.443Z'
+}
+{
+  message: RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined
+      at new NodeError (node:internal/errors:372:5)
+      at ServerResponse.writeHead (node:_http_server:275:11)
+      at ServerResponse._implicitHeader (node:_http_server:266:8)
+      at ServerResponse.end (node:_http_outgoing:871:10)
+      at ServerResponse.send (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\express\lib\response.js:232:10)
+      at ServerResponse.json (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\express\lib\response.js:278:15)
+      at updateProject (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\controllers\projectController.js:32:36)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+    code: 'ERR_HTTP_INVALID_STATUS_CODE'
+  },
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-24T05:37:51.060Z'
+}
+{
+  message: RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined
+      at new NodeError (node:internal/errors:372:5)
+      at ServerResponse.writeHead (node:_http_server:275:11)
+      at ServerResponse._implicitHeader (node:_http_server:266:8)
+      at ServerResponse.end (node:_http_outgoing:871:10)
+      at ServerResponse.send (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\express\lib\response.js:232:10)
+      at ServerResponse.json (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\express\lib\response.js:278:15)
+      at updateProject (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\controllers\projectController.js:32:36)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+    code: 'ERR_HTTP_INVALID_STATUS_CODE'
+  },
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-24T05:39:51.463Z'
+}
+{
+  message: TypeError: Project.findById is not a function
+      at updateProjectService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\projectService.js:40:13)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async updateProject (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\controllers\projectController.js:27:19),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-24T05:40:44.156Z'
+}
+{
+  message: Error: WHERE parameter "email" has invalid "undefined" value
+      at MySQLQueryGenerator.whereItemQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1693:13)
+      at C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1684:25
+      at Array.forEach (<anonymous>)
+      at MySQLQueryGenerator.whereItemsQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1682:35)
+      at MySQLQueryGenerator.getWhereConditions (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2025:19)
+      at MySQLQueryGenerator.selectQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:954:28)
+      at MySQLQueryInterface.select (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:59)
+      at Function.findAll (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1134:47)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async Function.findOne (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1228:12),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-24T05:56:41.511Z'
+}
+{
+  message: Error: WHERE parameter "email" has invalid "undefined" value
+      at MySQLQueryGenerator.whereItemQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1693:13)
+      at C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1684:25
+      at Array.forEach (<anonymous>)
+      at MySQLQueryGenerator.whereItemsQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1682:35)
+      at MySQLQueryGenerator.getWhereConditions (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2025:19)
+      at MySQLQueryGenerator.selectQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:954:28)
+      at MySQLQueryInterface.select (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:59)
+      at Function.findAll (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1134:47)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async Function.findOne (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1228:12),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-24T05:57:15.922Z'
+}
+{
+  message: Error: WHERE parameter "email" has invalid "undefined" value
+      at MySQLQueryGenerator.whereItemQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1693:13)
+      at C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1684:25
+      at Array.forEach (<anonymous>)
+      at MySQLQueryGenerator.whereItemsQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1682:35)
+      at MySQLQueryGenerator.getWhereConditions (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2025:19)
+      at MySQLQueryGenerator.selectQuery (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-generator.js:954:28)
+      at MySQLQueryInterface.select (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:59)
+      at Function.findAll (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1134:47)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async Function.findOne (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\sequelize\lib\model.js:1228:12),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-02-24T05:57:34.562Z'
+}

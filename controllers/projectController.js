@@ -8,11 +8,11 @@ const {
 
 const addProject = async (req, res, next) => {
   try {
-    const project = await addProjectService({
+    const response = await addProjectService({
       ...req.body,
       userId: req.tokenData.id,
     });
-    return res.status(project.code).json(project);
+    return res.status(response.code).json(response);
   } catch (err) {
     next(err);
   }
@@ -20,11 +20,11 @@ const addProject = async (req, res, next) => {
 
 const updateProject = async (req, res, next) => {
   try {
-    const project = await updateProjectService(
+    const response = await updateProjectService(
       { _id: req.params.id },
       req.body
     );
-    return res.status(project.code).json(project);
+    return res.status(response.code).json(response);
   } catch (err) {
     next(err);
   }
@@ -32,8 +32,8 @@ const updateProject = async (req, res, next) => {
 
 const findProject = async (req, res, next) => {
   try {
-    const project = await findProjectService({ _id: req.params.id });
-    return res.status(project.code).json(project);
+    const response = await findProjectService({ _id: req.params.id });
+    return res.status(response.code).json(response);
   } catch (err) {
     next(err);
   }
@@ -41,8 +41,8 @@ const findProject = async (req, res, next) => {
 
 const deleteProject = async (req, res, next) => {
   try {
-    const project = await deleteProjectService({ _id: req.params.id });
-    return res.status(project.code).json(project);
+    const response = await deleteProjectService({ _id: req.params.id });
+    return res.status(response.code).json(response);
   } catch (err) {
     next(err);
   }
@@ -50,8 +50,8 @@ const deleteProject = async (req, res, next) => {
 
 const getAllProjectByUserId = async (req, res, next) => {
   try {
-    const project = await FindAllProjectService({...req.query,userId:req.tokenData.id});
-    return res.status(project.code).json(project);
+    const response = await FindAllProjectService({...req.query,userId:req.tokenData.id});
+    return res.status(response.code).json(response);
   } catch (err) {
     next(err);
   }

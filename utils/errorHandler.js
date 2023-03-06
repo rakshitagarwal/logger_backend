@@ -1,5 +1,8 @@
 const { HTTP_CODE } = require("../utils/constants");
 const { errorLogger } = require("./logger");
+const { MESSAGE } = require("../utils/constants");
+
+
 const errorHandler = (err, req, res, next) => {
   if (!err) {
     return next();
@@ -7,13 +10,13 @@ const errorHandler = (err, req, res, next) => {
   errorLogger.error({ message: err });
   return res
     .status(HTTP_CODE.INTERNAL_SERVER_ERROR)
-    .json(HttpInternalError("Internal Server Error"));
+    .json(HttpInternalError(MESSAGE.ERROR_INTERNAL));
 };
 
 const invalidPathHandler = (req, res) => {
   return res
     .status(HTTP_CODE.BAD_REQUEST)
-    .json(HttpBadRequest("Invalid path"));
+    .json(HttpBadRequest(MESSAGE.ERROR_PATH));
 };
 
 const success = (message, data) => {

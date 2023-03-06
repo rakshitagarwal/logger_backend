@@ -2,8 +2,8 @@ const {findAllErrorService,addLogErrorService} = require("../services/errorServi
 
 const addLogError = async (req, res, next) => {
   try {
-    const errorLog = await addLogErrorService(req.body);
-    return res.status(errorLog.code).json(errorLog);
+    const response = await addLogErrorService(req.body);
+    return res.status(response.code).json(response);
   } catch (err) {
     next(err);
   }
@@ -11,8 +11,8 @@ const addLogError = async (req, res, next) => {
 
 const findAllError = async (req, res,next) => {
   try {
-    const errorLog = await findAllErrorService(req.query);
-    return res.status(errorLog.code).json(errorLog);
+    const response = await findAllErrorService(req.query);
+    return res.status(response.code).json(response);
   } catch (err) {
     next(err);
   }

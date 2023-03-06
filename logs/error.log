@@ -440,3 +440,106 @@
   label: 'error occured',
   timestamp: '2023-03-01T06:35:50.554Z'
 }
+{
+  message: Error: data and hash arguments required
+      at Object.compareSync (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\node_modules\bcrypt\bcrypt.js:166:15)
+      at userLoginService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\userService.js:49:42)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async login (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\controllers\userController.js:24:18),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-03-02T04:49:29.157Z'
+}
+{
+  message: TypeError: findAllProjects(...).limit is not a function
+      at FindAllProjectService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\projectService.js:68:6)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async getAllProjectByUserId (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\controllers\projectController.js:53:21),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-03-02T04:56:41.819Z'
+}
+{
+  message: ReferenceError: payload is not defined
+      at exports.findAllProjects (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\queries\projectQuery.js:29:37)
+      at FindAllProjectService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\projectService.js:67:25)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async getAllProjectByUserId (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\controllers\projectController.js:53:21),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-03-02T04:56:41.825Z'
+}
+{
+  message: TypeError: deleteLog is not a function
+      at deleteProjectService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\projectService.js:44:29)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async deleteProject (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\controllers\projectController.js:44:21),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-03-02T05:13:14.892Z'
+}
+{
+  message: ReferenceError: payload is not defined
+      at exports.findAllLogs (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\queries\logErrorQuery.js:24:41)
+      at findAllErrorService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\errorService.js:28:26)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async findAllError (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\controllers\errorHandlerController.js:14:22),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-03-02T05:28:54.105Z'
+}
+{
+  message: TypeError: findAllLogs(...).limit is not a function
+      at findAllErrorService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\errorService.js:29:6)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async findAllError (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\controllers\errorHandlerController.js:14:22),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-03-02T05:28:54.110Z'
+}
+{
+  message: TypeError: findTags(...).limit is not a function
+      at findTestTagService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\tagService.js:29:6)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async findAllTag (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\controllers\tagController.js:14:25),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-03-02T05:31:39.653Z'
+}
+{
+  message: ReferenceError: findAllProjects is not defined
+      at FindAllProjectService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\projectService.js:68:19)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async getAllProjectByUserId (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\controllers\projectController.js:53:21),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-03-02T06:51:42.908Z'
+}
+{
+  message: ReferenceError: findTags is not defined
+      at findTestTagService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\tagService.js:28:20)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async findAllTag (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\controllers\tagController.js:14:25),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-03-02T07:00:33.753Z'
+}
+{
+  message: TypeError: Cannot read properties of undefined (reading 'id')
+      at userLoginService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\userService.js:61:62)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async login (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\controllers\userController.js:24:22),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-03-02T08:53:50.727Z'
+}
+{
+  message: TypeError: getLogDelete is not a function
+      at deleteProjectService (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\services\projectService.js:56:29)
+      at runMicrotasks (<anonymous>)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async deleteProject (C:\Users\Umang Kansara\OneDrive\Documents\GV Work\logger-project\controllers\projectController.js:44:22),
+  level: 'error',
+  label: 'error occured',
+  timestamp: '2023-03-03T04:30:40.126Z'
+}

@@ -13,4 +13,4 @@ const projectSchema = new mongoose.Schema({
 },{ timestamps: true ,
   ...DTO_OBJECT
 });
-module.exports = mongoose.model("togs", projectSchema);
+module.exports = mongoose.model("tags", projectSchema);

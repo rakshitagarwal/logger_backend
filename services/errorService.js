@@ -1,9 +1,11 @@
-const LogError = require("../models/errorModel");
-const {HttpNotFound,success,HttpConflictRequest}=require("../utils/errorHandler");
+const { MESSAGE } = require("../utils/constants");
+const {HttpNotFound,success}=require("../utils/errorHandler");
+const {createLog,deleteLogById,countLog, findAllLogs} = require('../queries/logErrorQuery');
 
 const addLogErrorService = async (payload) => {
-  const result = await LogError.create(payload);
-  return success("logs added successfully", result);
+  const result = await createLog(payload);
+  if(result) return success(MESSAGE.LOG_ADDED, result);
+  return HttpNotFound(MESSAGE.LOG_NOT_FOUND);
 };
 
 const findAllErrorService = async (payload) => {
@@ -23,19 +25,17 @@ const findAllErrorService = async (payload) => {
       message: {$regex:payload.search}
     };
   }
-  const result = await LogError.count({projectId: payload?.projectId });
-  const errorLog = await LogError.find(filter)
-    .limit(payload.limit)
-    .skip(skip);
-  return success("found successfully", {data:errorLog,totalErrData:result,pageNumber:payload.skip+1});
+  const result = await countLog({projectId: payload?.projectId });
+  const errorLog = await findAllLogs(filter,{skip:skip,limit:payload.limit})
+  return success(MESSAGE.FOUND, {data:errorLog,totalErrData:result,pageNumber:payload.skip+1});
 };
 
 const deleteErrorService = async (payload) => {
-  const result = await LogError.deleteMany(payload)
+  const result = await deleteLogById(payload);
   if (!result) {
-    return HttpNotFound(`Error log doesn't exist`);
+    return HttpNotFound(MESSAGE.LOG_NOT_FOUND);
   } else {
-    return success('Error log deleted successfully');
+    return success(MESSAGE.DELETE);
   }
 }
 

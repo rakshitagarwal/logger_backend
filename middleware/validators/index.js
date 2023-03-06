@@ -1,58 +1,32 @@
-const bodyValidators = require("./bodyValidator");
-const queryValidators = require("./queryValiddator");
-const paramsValidators = require("./paramsValidator");
-const {
-  HttpBadRequest,
-  HttpInternalError,
-} = require("../../utils/errorHandler");
+const {HttpBadRequest} = require("../../utils/errorHandler");
+const { MESSAGE } = require("../../utils/constants");
 
-const bodyValidator = (validator) => {
-  if (!bodyValidators.hasOwnProperty(validator))
-    throw new Error(`'${validator}' validator is not exist`);
-  return async function (req, res, next) {
-    try {
-      const validated = await bodyValidators[validator].validateAsync(req.body);
-      req.body = validated;
-      next();
-    } catch (err) {
-      if (err.isJoi)return res.status(400).json(HttpBadRequest(err.message||"Bad Request"));
-      return res.status(500).json(HttpInternalError("Internal Server Error"));
-    }
-  };
+const bodyValidate = (schema) => (req, res, next) => {
+  const { error } = schema.validate(req.body);
+  if (error) {
+    return res.status(400).json(HttpBadRequest(error.message || MESSAGE.BAD_REQUEST));
+  } else {
+    next();
+  }
 };
 
-const paramsValidator = (validator) => {
-  if (!paramsValidators.hasOwnProperty(validator))
-    throw new Error(`'${validator}' validator is not exist`);
-  return async function (req, res, next) {
-    try {
-      const validated = await paramsValidators[validator].validateAsync(
-        req.params
-      );
-      req.params = validated;
-      next();
-    } catch (err) {
-      if (err.isJoi) return  res.status(400).json(HttpBadRequest(err.message||"Bad Request"));
-      return res.status(500).json(HttpInternalError("Internal Server Error"));
-    }
-  };
+const paramsValidate = (schema) => (req, res, next) => {
+  const { error } = schema.validate(req.params);
+  if (error) {
+    return res.status(400).json(HttpBadRequest(error.message || MESSAGE.BAD_REQUEST));
+  } else {
+    next();
+  }
+}
+
+const queryValidate = (schema) => (req, res, next) => {
+  const valid = schema.validate(req.query);
+  if (valid.error) {
+    return res.status(400).json(HttpBadRequest(valid.error.message || MESSAGE.BAD_REQUEST));
+  } else {
+    req.query=valid.value;
+    next();
+  }
 };
 
-const queryValidator = (validator) => {
-  if (!queryValidators.hasOwnProperty(validator))
-    throw new Error(`'${validator}' validator is not exist`);
-  return async function (req, res, next) {
-    try {
-      const validated = await queryValidators[validator].validateAsync(
-        req.query
-      );
-      req.query = validated;
-      next();
-    } catch (err) {
-      if (err.isJoi) return res.status(400).json(HttpBadRequest(err.message||"Bad Request"));
-      return res.status(500).json(HttpInternalError("Internal Server Error"));
-    }
-  };
-};
-
-module.exports = { bodyValidator, paramsValidator, queryValidator };
+module.exports = { bodyValidate, paramsValidate, queryValidate };

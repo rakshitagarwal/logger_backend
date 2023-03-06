@@ -1,29 +1,47 @@
-const User = require("../models/userModel");
-require("dotenv").config()
-const ejs = require("ejs")
-const { passwordHash, tokenGenerator, generateKey } = require("../utils/helper");
-const { forgetPasswordTemplate, params: forgetPasswordParams } = require("../utils/template/resetPassword")
+const { MESSAGE } = require("../utils/constants");
+require("dotenv").config();
+const ejs = require("ejs");
+const {
+  passwordHash,
+  tokenGenerator,
+  generateKey,
+} = require("../utils/helper");
+const {
+  forgetPasswordTemplate,
+  params: forgetPasswordParams,
+} = require("../utils/template/resetPassword");
 const { sendEmail } = require("../utils/sendMail");
-const {HttpNotFound,success,HttpConflictRequest,created, HttpBadRequest}=require("../utils/errorHandler")
+const {
+  findOneUser,
+  findUserById,
+  createUser,
+  updateUser,
+} = require("../queries/usersQuery");
+const {
+  HttpNotFound,
+  success,
+  HttpConflictRequest,
+  created,
+} = require("../utils/errorHandler");
 const bcrypt = require("bcrypt");
 
 const findUserService = async (payload) => {
-  const user = await User.findOne(payload);
+  const user = await findOneUser(payload);
   if (!user) {
-    return HttpNotFound("User not exists");
+    return HttpNotFound(MESSAGE.USER_NOT_FOUND);
   } else {
-    return success("users found successfully", user);
+    return success(MESSAGE.USER_FOUND, user);
   }
 };
 
 const addUserService = async (payload) => {
-  const existUser = await findUserService({ email: payload.email });
-  if (existUser?.data) {
-    return HttpConflictRequest("User already exists");
+  const existUser = await findOneUser({ email: payload.email });
+  if (existUser) {
+    return HttpConflictRequest(MESSAGE.USER_EXIST);
   } else {
     payload.password = await passwordHash(payload.password);
-    const user = await User.create(payload);
-    return created("user created successfully", user);
+    const user = await createUser(payload);
+    return created(MESSAGE.USER_ADDED, user);
   }
 };
 
@@ -31,52 +49,56 @@ const updateUserService = async (payload, condition) => {
   if (payload?.password) {
     payload.password = await passwordHash(payload.password);
   }
-  const user = await User.findByIdAndUpdate(condition, payload)
+  const user = await updateUser(condition, payload);
   if (!user) {
-    return HttpNotFound("user not found",)
+    return HttpNotFound(MESSAGE.USER_NOT_FOUND);
   } else {
-    return success("user updated successfully")
+    return success(MESSAGE.USER_UPDATE);
   }
-}
+};
 
 const userLoginService = async (payload) => {
-  const existUser = await findUserService({ email: payload.email });
-  if (!existUser.data) {
-    return HttpNotFound("User not found");
+  const existUser = await findOneUser({ email: payload.email });
+  if (!existUser) {
+    return HttpNotFound(MESSAGE.USER_NOT_FOUND);
   } else {
     const isValidPassword = await bcrypt.compareSync(
       payload.password,
-      existUser?.data?.password
+      existUser?.password
     );
     if (!isValidPassword) {
-      return HttpNotFound("Invalid password");
+      return HttpNotFound(MESSAGE.USER_PASSWORD);
     } else {
-      const {publicKey, privateKey } = generateKey
-      // console.log(publicKey,"++++++++++++++++++++++++++++++++++++++\n")
-      // console.log(privateKey)
-
-      const tokenPayload = {
-        id: existUser.data.id,
+      const { publicKey, privateKey } = generateKey;
+      const options = {
+        expiresIn: "2d",
+        algorithm: "RS256",
       };
-      const token = await tokenGenerator(tokenPayload);
-      return success("user logged in successfully", { token, data: existUser?.data });
+      const tokenPayload = {
+        id: existUser.id,
+      };
+      const token = await tokenGenerator(tokenPayload, privateKey, options);
+      const user = await updateUser(existUser.id, {
+        token: publicKey,
+      });
+      return success(MESSAGE.USER_LOGIN, { token, data: existUser });
     }
   }
 };
 
 const sendResetPasswordEmailService = async (payload) => {
-  const user = await findUserService({ email: payload.email });
+  const user = await findOneUser({ email: payload.email });
   if (!user.data) {
-    return user
+    return user;
   } else {
-    const token = await tokenGenerator({ id: user.data.id }, '10m')
+    const token = await tokenGenerator({ id: user.data.id }, "10m");
     const resetPasswordLink = `${process.env.RESERT_WEBSITE_LINK}?token=${token}`;
-    const compiledTemplate = ejs.compile(forgetPasswordTemplate)
+    const compiledTemplate = ejs.compile(forgetPasswordTemplate);
     forgetPasswordParams.resetPasswordUrl = resetPasswordLink;
     const template = compiledTemplate(forgetPasswordParams);
     const params = {
       to: [payload?.email],
-      Subject: 'Reset password',
+      Subject: MESSAGE.RESET,
       Body: {
         Html: template,
         Text: template,
@@ -85,7 +107,18 @@ const sendResetPasswordEmailService = async (payload) => {
     const result_reponse = await sendEmail(params);
     return result_reponse;
   }
+};
 
-}
+const getUserTokenService = async (payload) => {
+  const token = await findUserById(payload, ["token"]);
+  return token;
+};
 
-module.exports = { addUserService, findUserService, userLoginService, sendResetPasswordEmailService, updateUserService };
+module.exports = {
+  addUserService,
+  findUserService,
+  userLoginService,
+  sendResetPasswordEmailService,
+  updateUserService,
+  getUserTokenService,
+};

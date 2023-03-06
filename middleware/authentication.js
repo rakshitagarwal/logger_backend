@@ -1,23 +1,24 @@
 const jwt = require("jsonwebtoken");
-require("dotenv").config();
-const { response } = require("../utils/common");
-const {HttpUnauthorized} = require("../utils/errorHandler");
-
+const { MESSAGE } = require("../utils/constants");
+const { HttpUnauthorized } = require("../utils/errorHandler");
+const jwtDecode = require("jwt-decode");
+const { getUserTokenService } = require("../services/userService");
 module.exports = async (req, res, next) => {
   try {
-    let token = "";
+    let publicKey = "";
+    let token = ''
     if (!req.headers.authorization) {
-      return res.status(401).json(HttpUnauthorized("token not found"));
+      return res.status(401).json(HttpUnauthorized(MESSAGE.UNAUTHORIZED));
     }
     if (req.headers.authorization.startsWith("Bearer")) {
       token = req.headers.authorization.split(" ")[1];
-    } else {
-      token = req.headers.authorization;
+      const decodedToken = jwtDecode(token);
+      publicKey = await getUserTokenService({ _id: decodedToken?.id });
     }
-    const decoded = await jwt.verify(token, process.env.JWT_SECRET);
+    const decoded = await jwt.verify(token, publicKey?.token);
     req.tokenData = decoded;
     next();
   } catch (error) {
-    return res.status(401).json(HttpUnauthorized("Unauthorized"));
+    return res.status(401).json(HttpUnauthorized(MESSAGE.UNAUTHORIZED));
   }
 };

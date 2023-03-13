@@ -1,43 +1,46 @@
-const { addProjectService,findProjectService,deleteProjectService,updateProjectService} = require("../services/projectService");
+const {
+  addProjectService,
+  findProjectService,
+  deleteProjectService,
+  FindAllProjectService,
+  updateProjectService
+} = require('../services/projectService')
 
-const addProject = async (req, res) => {
-  const user = await addProjectService({...req.body, userId: req.tokenData.userId});
-  return res.status(user.code).json(user);
-};
-
-const findProject = async (req, res) => {
-  const user = await findProjectService({ projectId: req.params.id });
-  return res.status(user.code).json(user);
-};
-
-const deleteProject = async (req, res) => {
-  const project = await deleteProjectService({ projectId: req.params.id });
-  return res.status(project.code).json(user);
-};
+const addProject = async (req, res, next) => {
+  const response = await addProjectService({
+    ...req.body,
+    userId: req.tokenData.id
+  })
+  return res.status(response.code).json(response)
+}
 
 const updateProject = async (req, res) => {
-  const project = await updateProjectService({projectId: req.params.id},(req.body))
-  return res.status(project?.code).json(project);
+  const response = await updateProjectService(
+    { _id: req.params.id },
+    req.body
+  )
+  return res.status(response.code).json(response)
 }
 
-
-const addProjectController = async (req, res) => {
-
-}
-const findProjectController = async (req, res) => {
-
-}
-const deleteProjectController = async (req, res) => {
-
-}
-const updateProjectController = async (req, res) => {
-
+const findProject = async (req, res) => {
+  const response = await findProjectService({ _id: req.params.id })
+  return res.status(response.code).json(response)
 }
 
+const deleteProject = async (req, res) => {
+  const response = await deleteProjectService({ _id: req.params.id })
+  return res.status(response.code).json(response)
+}
+
+const getAllProjectByUserId = async (req, res) => {
+  const response = await FindAllProjectService({ ...req.query, userId: req?.tokenData?.id })
+  return res.status(response.code).json(response)
+}
 
 module.exports = {
   addProject,
   findProject,
   deleteProject,
+  getAllProjectByUserId,
   updateProject
-};
+}

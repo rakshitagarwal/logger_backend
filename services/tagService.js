@@ -1,0 +1,35 @@
+const { MESSAGE } = require('../utils/constants')
+const { success, created, HttpBadRequest } = require('../utils/errorHandler')
+const { createTag, countTag, findAllTags, findOneTag } = require('../queries/tagQuery')
+
+const addTextTagService = async (payload) => {
+  const existTag = await findOneTag(payload)
+  if (existTag) {
+    return HttpBadRequest(MESSAGE.TAG_EXIST)
+  } else {
+    const result = await createTag(payload)
+    return created(MESSAGE.TAG_ADDED, result)
+  }
+}
+
+const findTestTagService = async (payload) => {
+  let filter = {}
+  let skip
+  if (payload?.skip) {
+    skip = payload.skip * payload.limit
+  }
+  if (payload?.search) {
+    filter = {
+      ...filter,
+      tagName: { $regex: payload.search }
+    }
+  }
+  const result = await countTag()
+  const errorLog = await findAllTags(filter, { skip, limit: payload.limit })
+  return success(MESSAGE.FOUND, { data: errorLog, totalErrData: result, pageNumber: payload.skip + 1 })
+}
+
+module.exports = {
+  findTestTagService,
+  addTextTagService
+}

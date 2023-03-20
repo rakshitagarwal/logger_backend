@@ -1,28 +1,45 @@
-const mongoose = require("mongoose");
-const {DTO_OBJECT}=require("../utils/common")
-const log_errorSchema = new mongoose.Schema({
+const mongoose = require('mongoose')
+const { DTO_OBJECT } = require('../utils/common')
+const logErrorSchema = new mongoose.Schema({
   level: {
     type: String,
-    required: true,
+    required: true
   },
   projectId: {
     type: mongoose.Schema.Types.ObjectId,
     required: true,
     ref: 'Project'
   },
+  timestamp: {
+    type: Date
+  },
   message: {
     type: String,
-    required: true,
+    required: true
   },
   label: {
     type: String
   },
-},
-  {
-    timestamps: true,
-    ...DTO_OBJECT
+  service: {
+    type: String
+  },
+  code: {
+    type: String
+  },
+  method: {
+    type: String
+  },
+  stack: {
+    type: String
+  },
+  path: {
+    type: String
   }
-);
+},
+{
+  timestamps: true,
+  ...DTO_OBJECT
+}
+)
 
-
-module.exports = mongoose.model("log_error", log_errorSchema);
+module.exports = mongoose.model('log_error', logErrorSchema)

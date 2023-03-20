@@ -1,13 +1,16 @@
-const express = require("express");
-const router = express.Router();
-const projectController = require('../controllers/projectController');
-const {ROUTE_PATH} = require('../utils/constants');
-const {bodyValidator,paramsValidator, queryValidator}=require("../middleware/validators")
+const AsyncRouter = require('express-async-router').AsyncRouter
+const router = AsyncRouter()
+const projectController = require('../controllers/projectController')
+const { ROUTE_PATH } = require('../utils/constants')
+const { bodyValidate, paramsValidate, queryValidate } = require('../middleware/validators')
+const bodyValidation = require('../middleware/validators/bodyValidator')
+const queryValidation = require('../middleware/validators/queryValiddator')
+const paramsValidation = require('../middleware/validators/paramsValidator')
 
-router.post(ROUTE_PATH.BASE,bodyValidator('project'),projectController.addProject);
-router.get(ROUTE_PATH.ID_ROUTE,paramsValidator('id'),projectController.findProject)
-router.get(ROUTE_PATH.BASE,queryValidator('projectPagination'),projectController.getAllProjectByUserId)
-router.delete(ROUTE_PATH.ID_ROUTE,paramsValidator('id'),projectController.deleteProject)
-router.put(ROUTE_PATH.ID_ROUTE,bodyValidator("updatedProject"), projectController.updateProject);
-
-module.exports = router;
+router.post(ROUTE_PATH.BASE, bodyValidate(bodyValidation.project), projectController.addProject)
+router.get(ROUTE_PATH.ID_ROUTE, paramsValidate(paramsValidation.id), projectController.findProject)
+router.get(ROUTE_PATH.BASE, queryValidate(queryValidation.projectPagination), projectController.getAllProjectByUserId)
+router.delete(ROUTE_PATH.ID_ROUTE, paramsValidate(paramsValidation.id), projectController.deleteProject)
+router.put(ROUTE_PATH.ID_ROUTE, bodyValidate(bodyValidation.updatedProject), projectController.updateProject)
+router.get(ROUTE_PATH.SECRETE_KEY, paramsValidate(paramsValidation.id), projectController.projectAccessSecretKey)
+module.exports = router

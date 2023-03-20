@@ -1,14 +1,14 @@
-const mongoose = require("mongoose");
-const { DTO_OBJECT } = require("../utils/common");
+const mongoose = require('mongoose')
+const { DTO_OBJECT } = require('../utils/common')
 const projectSchema = new mongoose.Schema({
   projectName: {
     type: String,
-    required: true,
+    required: true
   },
   userId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
-    required: true,
+    required: true
   },
   description: {
     type: String
@@ -17,14 +17,18 @@ const projectSchema = new mongoose.Schema({
     type: String
   },
   textTag: {
-    type: String,
+    type: String
   },
   status: {
     type: String,
-    enum: ["ACTIVE", "INACTIVE", "DELETED"],
-    default: "ACTIVE",
+    enum: ['ACTIVE', 'INACTIVE', 'DELETED'],
+    default: 'ACTIVE'
   },
-},{ timestamps: true,
+  secretKey: {
+    type: String
+  }
+}, {
+  timestamps: true,
   ...DTO_OBJECT
-});
-module.exports = mongoose.model("Project", projectSchema);
+})
+module.exports = mongoose.model('Project', projectSchema)

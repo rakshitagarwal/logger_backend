@@ -1,8 +1,8 @@
-const Joi = require('joi');
-const Joi2=require("./inputValidate")
+const Joi = require('joi')
+const Joi2 = require('./inputValidate')
 
-const id=Joi.object({
-    id:Joi2.id.required()
+const id = Joi.object({
+  id: Joi2.id.required()
 })
 
-module.exports={id};
+module.exports = { id }

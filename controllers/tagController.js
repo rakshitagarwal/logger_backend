@@ -1,21 +1,13 @@
-const { findTestTagService, addTextTagService, } = require('../services/tagService');
+const { findTestTagService, addTextTagService } = require('../services/tagService')
 
-const addTag = async (req, res, next) => {
-    try {
-        const testTag = await addTextTagService(req.body);
-        return res.status(testTag.code).json(testTag);
-    } catch (err) {
-        next(err);
-    }
-};
+const addTag = async (req, res) => {
+  const response = await addTextTagService(req.body)
+  return res.status(response.code).json(response)
+}
 
-const findAllTag = async (req, res, next) => {
-    try {
-        const testTag = await findTestTagService(req.query);
-        return res.status(testTag.code).json(testTag);
-    } catch (err) {
-        next(err);
-    }
-};
+const findAllTag = async (req, res) => {
+  const response = await findTestTagService(req.query)
+  return res.status(response.code).json(response)
+}
 
-module.exports = { addTag, findAllTag };
+module.exports = { addTag, findAllTag }

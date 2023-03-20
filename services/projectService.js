@@ -1,78 +1,103 @@
-const Project = require("../models/projectModel");
-const {HttpNotFound,success,HttpConflictRequest,created, HttpBadRequest}=require("../utils/errorHandler");
-const { response } = require("../utils/common");
-const { deleteErrorService } = require("./errorService");
+const { MESSAGE } = require('../utils/constants')
+const { HttpNotFound, success, HttpConflictRequest, created } = require('../utils/errorHandler')
+const { deleteLogById } = require('../queries/logErrorQuery')
+require('dotenv').config()
+const crypto = require('crypto')
+const {
+  findOneProject,
+  countProject,
+  createProject,
+  updateProject,
+  deleteProject,
+  findAllProjects
+} = require('../queries/projectQuery')
 
 const findProjectService = async (payload) => {
-  const project = await Project.findOne(payload);
+  const project = await findOneProject(payload)
   if (!project) {
-    return HttpNotFound('Project not exists')
+    return HttpNotFound(MESSAGE.PROJECT_NOT_FOUND)
   } else {
-    return success("Project found successfully", project);
+    return success(MESSAGE.PROJECT_FOUND, project)
   }
-};
+}
 
 const addProjectService = async (payload) => {
-  const existProject = await findProjectService({
+  const existProject = await findOneProject({
     projectName: payload.projectName,
-    userId: payload.userId,
-  });
-  if (existProject?.data) {
-    return HttpConflictRequest("Project already exists");
+    userId: payload.userId
+  })
+  if (existProject) {
+    return HttpConflictRequest(MESSAGE.PROJECT_EXIST)
   } else {
-    payload.slug=payload.projectName.replace(/\s+/g, '-').toLowerCase();
-    const project = await Project.create(payload);
-    return created("Project created successfully", project);
+    payload.slug = payload.projectName.replace(/\s+/g, '-').toLowerCase()
+    const project = await createProject(payload)
+    return created(MESSAGE.PROJECT_ADDED, project)
   }
-};
+}
 
 const updateProjectService = async (projectId, payload) => {
-  const project = await Project.findByIdAndUpdate(projectId, payload);
-  if (!project) {
-    return HttpBadRequest("Project not exists");
-  } else {
-    return success("Project updated successfully");
+  if (payload?.projectName) {
+    payload.slug = payload.projectName.replace(/\s+/g, '-').toLowerCase()
   }
-};
+  const project = await updateProject(projectId, payload)
+  if (!project) {
+    return HttpNotFound(MESSAGE.PROJECT_NOT_FOUND)
+  } else {
+    return success(MESSAGE.PROJECT_UPDATED)
+  }
+}
 
 const deleteProjectService = async (payload) => {
-  const project = await findProjectService(payload);
-  if (!project?.data) {
-    return HttpBadRequest("Project not exists");
+  const project = await findOneProject(payload)
+  if (!project) {
+    return HttpNotFound(MESSAGE.PROJECT_NOT_FOUND)
   } else {
-    const errorLogs = await deleteErrorService(payload);
-    const result = await Project.findByIdAndDelete(payload);
-    return success("Project deleted successfully");
+    await deleteLogById({ projectId: payload._id })
+    await deleteProject(payload)
+    return success(MESSAGE.PROJECT_DELETED)
   }
-};
+}
+
 const FindAllProjectService = async (payload) => {
-  let filter = {};
-  let skip;
+  let filter = {}
+  let skip
   if (payload?.skip) {
-    skip = payload.skip * payload.limit;
+    skip = payload.skip * payload.limit
   }
   if (payload?.userId) {
     filter = {
-      userId: payload.userId,
-    };
+      userId: payload.userId
+    }
   }
   if (payload?.search) {
     filter = {
       ...filter,
-      projectName: {$regex:payload.search}
-    };
+      projectName: { $regex: payload.search }
+    }
   }
-  const result = await Project.count({userId: payload?.userId });
-  const project = await Project.find(filter)
-    .limit(payload.limit)
-    .skip(skip);
-  return success("found successfully", {
+  const result = await countProject({ userId: payload?.userId })
+  const project = await findAllProjects(filter, { skip, limit: payload.limit })
+  return success(MESSAGE.FOUND, {
     data: project,
     totalData: result,
-    pageNumber: payload.skip + 1,
-  });
-};
+    pageNumber: payload.skip + 1
+  })
+}
 
+const getProjectSecretKey = async (payload) => {
+  const project = await findOneProject(payload)
+  if (!project) {
+    return HttpNotFound('Project not exists')
+  } else {
+    const secretKey = crypto.createHash('sha1').update(project?.projectName).digest('hex').toLocaleUpperCase()
+    await updateProject(payload, { secretKey })
+    return success('found successfully', {
+      projectId: project.id,
+      secretKey,
+      url: process.env.ERROR_LOGGER_URL
+    })
+  }
+}
 
 module.exports = {
   addProjectService,
@@ -80,4 +105,5 @@ module.exports = {
   findProjectService,
   FindAllProjectService,
   updateProjectService,
-};
+  getProjectSecretKey
+}

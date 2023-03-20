@@ -169,9 +169,9 @@ const forgetPasswordTemplate = `
     </div>
 </body>
 
-</html>`;
+</html>`
 
 const params = {
-    resetPasswordUrl: '',
-};
-module.exports = { forgetPasswordTemplate, params };
+  resetPasswordUrl: ''
+}
+module.exports = { forgetPasswordTemplate, params }
